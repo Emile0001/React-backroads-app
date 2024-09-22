@@ -1,15 +1,12 @@
 import "./Nav.css";
+import logo from "./../../images/logo.svg";
 
 export const Nav = () => {
     return (
         <nav className="navbar">
             <div className="nav-center">
                 <div className="nav-header">
-                    <img
-                        src="./../../images/tour-1.jpeg"
-                        className="nav-logo"
-                        alt="backroads"
-                    />
+                    <img src={logo} className="nav-logo" alt="backroads" />
                     <button
                         type="button"
                         className="nav-toggle"
