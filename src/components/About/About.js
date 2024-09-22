@@ -1,3 +1,4 @@
+import "./About.css";
 import imageAbout from "./../../images/about.jpeg";
 
 export const About = () => {
