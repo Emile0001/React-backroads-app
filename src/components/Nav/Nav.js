@@ -1,5 +1,6 @@
 import "./Nav.css";
 import logo from "./../../images/logo.svg";
+import { pageLinks } from "../../Data/pageLinks";
 
 export const Nav = () => {
     return (
@@ -15,35 +16,17 @@ export const Nav = () => {
                         <i className="fas fa-bars"></i>
                     </button>
                 </div>
-                {/* <!-- left this comment on purpose --> */}
+
                 <ul className="nav-links" id="nav-links">
-                    <li>
-                        <a href="#home" className="nav-link">
-                            {" "}
-                            home{" "}
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#about" className="nav-link">
-                            {" "}
-                            about{" "}
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#services" className="nav-link">
-                            {" "}
-                            services{" "}
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#tours" className="nav-link">
-                            {" "}
-                            tours
-                        </a>
-                    </li>
+                    {pageLinks.map((links) => {
+                        return (
+                            <li key={links.id}>
+                                <a href={links.href} className="nav-link">
+                                    {links.text}
+                                </a>
+                            </li>
+                        );
+                    })}
                 </ul>
 
                 <ul className="nav-icons">
