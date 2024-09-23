@@ -1,7 +1,9 @@
 import "./Nav.css";
 import logo from "./../../images/logo.svg";
-import { pageLinks } from "../../Data/pageLinks";
-import { socialLinks } from "../../Data/socialLinks";
+import { socialLinkData } from "../../Data/socialLinkData";
+import { pageLinkData } from "../../Data/pageLinkData";
+import { PageLinks } from "./PageLinks";
+import { SocialLinks } from "./SocialLinks";
 
 export const Nav = () => {
     return (
@@ -19,29 +21,20 @@ export const Nav = () => {
                 </div>
 
                 <ul className="nav-links" id="nav-links">
-                    {pageLinks.map((links) => {
+                    {pageLinkData.map((pLinks) => {
                         return (
-                            <li key={links.id}>
-                                <a href={links.href} className="nav-link">
-                                    {links.text}
-                                </a>
+                            <li key={pLinks.id}>
+                                <PageLinks {...pLinks}></PageLinks>
                             </li>
                         );
                     })}
                 </ul>
 
                 <ul className="nav-icons">
-                    {socialLinks.map((sLinks) => {
+                    {socialLinkData.map((sLinks) => {
                         return (
                             <li key={sLinks.id}>
-                                <a
-                                    href={sLinks.href}
-                                    target={sLinks.target}
-                                    className="nav-icon"
-                                    rel="noreferrer"
-                                >
-                                    <i className={sLinks.icon}></i>
-                                </a>
+                                <SocialLinks {...sLinks}></SocialLinks>
                             </li>
                         );
                     })}

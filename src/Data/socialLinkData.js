@@ -1,4 +1,4 @@
-export const socialLinks = [
+export const socialLinkData = [
     {
         id: 1,
         href: "https://www.facebook.com",
