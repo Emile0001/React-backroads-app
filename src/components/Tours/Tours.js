@@ -4,17 +4,14 @@ import tour1Img from "./../../images/tour-1.jpeg";
 import tour2Img from "./../../images/tour-2.jpeg";
 import tour3Img from "./../../images/tour-3.jpeg";
 import tour4Img from "./../../images/tour-4.jpeg";
+import { Title } from "../Title/Title";
 // import tour5Img from "./../../images/tour-5.jpeg";
 // import tour6Img from "./../../images/tour-6.jpeg";
 
 export const Tours = () => {
     return (
         <section className="section" id="tours">
-            <div className="section-title">
-                <h2>
-                    featured <span>tours</span>
-                </h2>
-            </div>
+            <Title title="Featured" subtitle="Tours"></Title>
 
             <div className="section-center featured-center">
                 <article className="tour-card">
