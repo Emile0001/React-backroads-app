@@ -1,8 +1,15 @@
-export const PageLinks = (props) => {
-    const { href, text } = props;
+import { pageLinkData } from "../../Data/pageLinkData";
+
+export const PageLinks = () => {
     return (
-        <a href={href} className="nav-link">
-            {text}
-        </a>
+        <>
+            {pageLinkData.map((pLinks) => {
+                return (
+                    <a href={pLinks.href} className="nav-link">
+                        {pLinks.text}
+                    </a>
+                );
+            })}
+        </>
     );
 };

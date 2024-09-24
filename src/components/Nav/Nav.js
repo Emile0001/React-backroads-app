@@ -1,9 +1,8 @@
 import "./Nav.css";
 import logo from "./../../images/logo.svg";
-import { socialLinkData } from "../../Data/socialLinkData";
-import { pageLinkData } from "../../Data/pageLinkData";
+
 import { PageLinks } from "./PageLinks";
-import { SocialLinks, SocialLinks2 } from "./SocialLinks";
+import { SocialLinks } from "./SocialLinks";
 
 export const Nav = () => {
     return (
@@ -21,17 +20,11 @@ export const Nav = () => {
                 </div>
 
                 <ul className="nav-links" id="nav-links">
-                    {pageLinkData.map((pLinks) => {
-                        return (
-                            <li key={pLinks.id}>
-                                <PageLinks {...pLinks}></PageLinks>
-                            </li>
-                        );
-                    })}
+                    <PageLinks></PageLinks>
                 </ul>
 
                 <ul className="nav-icons">
-                    <SocialLinks2></SocialLinks2>
+                    <SocialLinks></SocialLinks>
                 </ul>
             </div>
         </nav>
