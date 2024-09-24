@@ -1,58 +1,37 @@
 import "./Footer.css";
+import { socialLinkData } from "../../Data/socialLinkData";
+import { pageLinkData } from "../../Data/pageLinkData";
 
 export const Footer = () => {
     return (
         <footer className="section footer">
             <ul className="footer-links">
-                <li>
-                    <a href="#home" className="footer-link">
-                        home
-                    </a>
-                </li>
-                <li>
-                    <a href="#about" className="footer-link">
-                        about
-                    </a>
-                </li>
-                <li>
-                    <a href="#services" className="footer-link">
-                        services
-                    </a>
-                </li>
-                <li>
-                    <a href="#featured" className="footer-link">
-                        featured
-                    </a>
-                </li>
+                {pageLinkData.map((links) => {
+                    const { id, href, text } = links;
+                    return (
+                        <li key={id}>
+                            <a href={href} className="footer-link">
+                                {text}
+                            </a>
+                        </li>
+                    );
+                })}
             </ul>
             <ul className="footer-icons">
-                <li>
-                    <a
-                        href="https://www.twitter.com"
-                        target="_blank"
-                        className="footer-icon"
-                    >
-                        <i className="fab fa-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://www.twitter.com"
-                        target="_blank"
-                        className="footer-icon"
-                    >
-                        <i className="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://www.twitter.com"
-                        target="_blank"
-                        className="footer-icon"
-                    >
-                        <i className="fab fa-squarespace"></i>
-                    </a>
-                </li>
+                {socialLinkData.map((sLinks) => {
+                    const { id, href, target, icon } = sLinks;
+                    return (
+                        <li key={id}>
+                            <a
+                                href={href}
+                                target={target}
+                                className="footer-icon"
+                            >
+                                <i className={icon}></i>
+                            </a>
+                        </li>
+                    );
+                })}
             </ul>
             <p className="copyright">
                 copyright &copy; Backroads travel tours company
