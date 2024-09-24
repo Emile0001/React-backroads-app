@@ -3,7 +3,7 @@ import logo from "./../../images/logo.svg";
 import { socialLinkData } from "../../Data/socialLinkData";
 import { pageLinkData } from "../../Data/pageLinkData";
 import { PageLinks } from "./PageLinks";
-import { SocialLinks } from "./SocialLinks";
+import { SocialLinks, SocialLinks2 } from "./SocialLinks";
 
 export const Nav = () => {
     return (
@@ -31,13 +31,7 @@ export const Nav = () => {
                 </ul>
 
                 <ul className="nav-icons">
-                    {socialLinkData.map((sLinks) => {
-                        return (
-                            <li key={sLinks.id}>
-                                <SocialLinks {...sLinks}></SocialLinks>
-                            </li>
-                        );
-                    })}
+                    <SocialLinks2></SocialLinks2>
                 </ul>
             </div>
         </nav>
