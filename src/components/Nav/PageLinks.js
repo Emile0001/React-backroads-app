@@ -1,16 +1,16 @@
 import { pageLinkData } from "../../Data/pageLinkData";
+import { PageLink } from "./PageLink";
 
 export const PageLinks = ({ linkClass }) => {
     return (
         <>
             {pageLinkData.map((pLinks) => {
-                const { id, href, text } = pLinks;
                 return (
-                    <li key={id}>
-                        <a href={href} className={linkClass}>
-                            {text}
-                        </a>
-                    </li>
+                    <PageLink
+                        pLinks={pLinks}
+                        key={pLinks.id}
+                        linkClass={linkClass}
+                    ></PageLink>
                 );
             })}
         </>
