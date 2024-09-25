@@ -20,11 +20,11 @@ export const Nav = () => {
                 </div>
 
                 <ul className="nav-links" id="nav-links">
-                    <PageLinks></PageLinks>
+                    <PageLinks linkClass="nav-link"></PageLinks>
                 </ul>
 
                 <ul className="nav-icons">
-                    <SocialLinks></SocialLinks>
+                    <SocialLinks linkClass="nav-icon"></SocialLinks>
                 </ul>
             </div>
         </nav>
