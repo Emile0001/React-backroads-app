@@ -1,6 +1,6 @@
 import "./Tours.css";
 import { Title } from "../Title/Title";
-import { ToursCardComponent } from "./ToursCardComponent";
+import { TourCard } from "./TourCard";
 
 export const Tours = () => {
     return (
@@ -8,7 +8,7 @@ export const Tours = () => {
             <Title title="Featured" subtitle="Tours"></Title>
 
             <div className="section-center featured-center">
-                <ToursCardComponent />
+                <TourCard />
             </div>
         </section>
     );

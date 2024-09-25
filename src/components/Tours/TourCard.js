@@ -1,6 +1,6 @@
-import { tourData } from "../../Data/tour.data";
+import { tourData } from "../../Data/tourData";
 
-export const ToursCardComponent = () => {
+export const TourCard = () => {
     return (
         <>
             {tourData.map((tours) => {
